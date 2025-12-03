@@ -1,9 +1,5 @@
 node {
-  stage('scm clone') {
-  git 'https://github.com/12Madan/rest-calculator' 
-  }
-  stage ('maven') {
-  sh 'mvn clean package'
+  stage('sysytem info') {
+  echo "Hello from Jenkins pipeline"
   }
   }
-  
