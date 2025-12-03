@@ -8,10 +8,12 @@ pipeline {
     stages {
         stage('Print Selected Env') {
             steps {
+                step{
                 if(${params.ENV} == dev){
                 echo "user selected dev"
             }
         }
     }
     }
+}
 }
