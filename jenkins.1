@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Use Parameter') {
             steps {
-                echo "You entered username: ${params.variable}"
+                echo "You entered username: ${params.options}"
             }
         }
     }
