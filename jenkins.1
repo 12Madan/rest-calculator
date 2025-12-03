@@ -1,0 +1,9 @@
+node {
+  stage('scm clone') {
+  git 'https://github.com/12Madan/rest-calculator' 
+  }
+  stage ('maven') {
+  sh echo 'maven clean package'
+  }
+  }
+  
