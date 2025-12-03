@@ -1,14 +1,14 @@
 pipeline {
     agent any
 
+    parameters {
+        string(name: 'USERNAME', defaultValue: 'admin', description: 'User Name')
+    }
+
     stages {
-        stage('Show Env Variables') {
+        stage('Use Parameter') {
             steps {
-                echo "Workspace: ${env.WORKSPACE}"
-                echo "Jenkins Home: ${env.JENKINS_HOME}"
-                echo "Build Number: ${env.BUILD_NUMBER}"
-                echo "Job Name: ${env.JOB_NAME}"
-                echo "Node: ${env.NODE_NAME}"
+                echo "You entered username: ${params.USERNAME}"
             }
         }
     }
