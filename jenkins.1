@@ -1,5 +1,5 @@
 node {
-  stage('sysytem info') {
-  echo "Hello from Jenkins pipeline"
-  }
-  }
+  stages {
+        stage('Build') {
+            steps { echo "Build stage running" }
+        }
