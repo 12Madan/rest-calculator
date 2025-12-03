@@ -1,5 +1,15 @@
-node {
-  stages {
-        stage('Build') {
-            steps { echo "Build stage running" }
+pipeline {
+    agent any
+
+    stages {
+        stage('Show Env Variables') {
+            steps {
+                echo "Workspace: ${env.WORKSPACE}"
+                echo "Jenkins Home: ${env.JENKINS_HOME}"
+                echo "Build Number: ${env.BUILD_NUMBER}"
+                echo "Job Name: ${env.JOB_NAME}"
+                echo "Node: ${env.NODE_NAME}"
+            }
         }
+    }
+}
